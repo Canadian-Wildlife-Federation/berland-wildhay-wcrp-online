@@ -1,6 +1,15 @@
 
 
-# References {.unnumbered}
+# Acknowledgements and References {-}
 
-::: {#refs}
-:::
+## Recommended Citation {-}
+
+Mazany-Wright, N, F. Montgomery, B. Rebellato, and N. W. R. Lapointe. 2026. Berland-Wildhay watershed connectivity restoration plan. Canadian Wildlife Federation. Ottawa, Ontario, Canada. 
+
+## Acknowledgements {-}
+
+## References  {-}
+
+Shewan, R. (2025a, September). 2025 Stream Crossing and Barrier Assessments: Berland and Wildhay Watersheds. Prepared for Canadian Wildlife Federation by Poseidon Environmental Ltd. 
+
+Shewan, R. (2025b, November). Summary report: Stream crossing and fish habitat assessments. Prepared for Canadian Wildlife Federation by Poseidon Environmental Ltd. 

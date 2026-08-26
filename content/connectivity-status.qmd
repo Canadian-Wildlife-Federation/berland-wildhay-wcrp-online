@@ -1,65 +1,32 @@
-```{python echo=FALSE}
-import warnings
-import pandas as pd
-import numpy as np
-import python.api_calls as api
-import python.connectivity_assess as conn_table
-
-warnings.filterwarnings('ignore')
 
 
-```
+# Connectivity Status Results   {-}
+In the Berland and Wildhay watersheds, X km of cold-water salmonids habitat are currently connected to the ocean and X km are disconnected from it. This means that X% of the X km of total habitat is connected. 
 
-```{r echo=FALSE}
-#| echo: false
-#| include: true
-#| warning: false
+## Structure Count  {-}
 
-library(reticulate)
+In the Berland and Wildhay watersheds, X structures potentially disconnect cold-water salmonids habitat.  
 
-```
 
-# Connectivity Status Assessment and Goals {-}
+## Map  {-}
 
-## Connectivity Status Assessment {-}
+![Figure 1: Map of cold-water salmonids habitat and structures that are confirmed or potential barriers to fish passage in the Berland and Wildhay watersheds as of July 2026. Structure data were obtained from ABFishPass and the Canadian Aquatic Barriers Database (aquaticbarriers.ca). The accessibility model represents areas of the watershed that one or more cold-water salmonid species could access naturally in the absence of anthropogenic barriers. The habitat model represents the subset of accessible waterbodies that may be used by one or more cold-water salmonids for spawning and/or rearing. Available local knowledge and data were incorporated and overruled habitat model results. Thick red lines represent habitat considered to be fully disconnected (upstream of barriers or unassessed structures).](images/HacMap.png)
 
-(see @tbl-connectivity).
 
-The current connectivity status assessment relies on GIS analyses to map known and modelled barriers to fish passage, identify stream reaches that have potential spawning and rearing habitat, estimate the proportion of habitat that is currently accessible to target species, and prioritize barriers for field assessment that would provide the greatest gains in connectivity. To support a flexible prioritization framework to identify priority barriers in the watershed, two assumptions are made: 1,any modelled (i.e., passability status is unknown) or partial barriers are treated as complete barriers to passage and 2, the habitat modelling is binary, it does not assign any habitat quality values. As such, the current connectivity status will be refined over time as more data on habitat and barriers are collected. For more detail on how the connectivity status assessments were conducted, see Data Download and Methods. 
+## Habitat Accumulation Curve {-}
 
-```{python echo=FALSE}
-#| label: tbl-connectivity
-#| tbl-cap: "SAMPLE TABLE Connectivity status assessment for spawning and rearing habitat."
-#| warning: false
-#| echo: false
+![Figure 2: Habitat Accumulation Curve (HAC) showing structures in the Berland and Wildhay watersheds as of July 2026. Structures are ranked based on how much (km) habitat for cold-water salmonids is upstream. The y-axis represents the cumulative amount of potential habitat gain (km). Habitat upstream of unassessed structures is considered disconnected until field assessments are completed.](images/BW_HAC.png)
 
-df = conn_table.make_assess_table("Andromous Salmon", "Available Spawning Habitat", "% of total habitat", 50, 75, 90, api.connect)
-df
+## Habitat Accumulation Summary Table  {-}
 
-```
+Table 1: Labelled structures in the Habitat Accumulation Curve (Figure 2), their rank, and upstream habitat for cold-water salmonids in Berland and Wildhay watersheds. Habitat gain represents the amount (km) of habitat upstream of that structure to the next structure and depicts the potential gain in habitat if passage at that structure was restored.  
 
 
 ## Goals {-}
 
+The planning group was reminded to develop goals that are SMART (specific, measurable, achievable, results-oriented and time-bound. To move beyond the status quo of 86.4% connectivity, after some discussion, the group agreed to the following proposed Goals: 
 
-```{python echo=FALSE}
-#| label: tbl-goals
-#| tbl-cap: "SAMPLE TABLE Goals to improve spawning and rearing habitat connectivity for target species in the watershed. The goals were established through discussions with the planning team and represent the resulting desired state of connectivity in the watershed. The goals are subject to change as more information and data are collected over the course of the plan timeline (e.g., the current connectivity status is updated based on barrier field assessments)."
-#| warning: false
-#| echo: false
-df = pd.DataFrame({"Goal #": [1,2],
-                   "Goal": ["By 2040, the percent (%) of total linear habitat accessible to anadromous salmon will increase from " + str(api.connect)+"% " + " to 96% within the Horsefly River watershed (i.e., reconnect at least "+ str(api.gain) +" km of habitat).",
-                            "By 2024, the total area of overwintering habitat accessible to Anadromous Salmon will increase by 1,500 m2 within the Horsefly River watershed. "]
-                    })
+ - By 2027, the proportion of linear habitat accessible to Coldwater Salmonids in the Berland-Wildhay Watershed will increase from 86.4% to 90%.  
 
-data = df.style.hide().set_properties(**{'text-align': 'left'})
-
-data.set_table_styles(
-   [{
-       'selector': 'th',
-       'props': [('background-color', '#008270'),('text-align', 'left')]
-   }])
-
-```
-
+ - By 2032, the proportion of linear habitat accessible to Coldwater Salmonids in the Berland-Wildhay Watershed will increase from 86.4% to 95%. 
 

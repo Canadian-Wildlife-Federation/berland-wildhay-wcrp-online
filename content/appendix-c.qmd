@@ -1,0 +1,15 @@
+# Appendix C - Strategies and Actions {-}
+
+```{r}
+#| label: table-y
+#| tbl-cap: "Table X: Berland-Wildhay WCRP planning team members. Planning team members contributed to the development of this plan by participating in scoping and planning meetings, and reviewing documents and data."
+#| warning: false
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
+
+data <- read.csv("data/wcrp_strategy_actions.csv", check.names = FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
