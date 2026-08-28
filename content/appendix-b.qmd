@@ -11,7 +11,11 @@
 source("Rscripts/table_formatting.R")
 library("flextable")
 
-data <- read.csv("data/BW_Tables(Planning Team).csv", check.names = FALSE)
+data <- read.csv(
+  "data/BW_Tables(Planning Team).csv",
+  check.names = FALSE,
+  fileEncoding = "Windows-1252"
+)
 ft <- flextable(data)
 ft <- format_flextable(ft)
 ft

@@ -11,5 +11,20 @@ Table X: Structures in Berland and Wildhay watersheds that have been assessed fo
 
 ## Excluded Structures {-}
 
-Table X: Structures in Berland and Wildhay watersheds that are excluded from further consideration in subsequent ranking and work planning because the structure is not present, is confirmed passable (e.g., bridge), or has no habitat upstream for cold-water salmonids. 
+```{r}
+#| label: table-x
+#| tbl-cap: "Table X: Structures in Berland and Wildhay watersheds that are excluded from further consideration in subsequent ranking and work planning because the structure is not present, is confirmed passable (e.g., bridge), or has no habitat upstream for cold-water salmonids."
+#| warning: false
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
 
+data <- read.csv(
+  "data/BW_Tables(Excluded Structures).csv",
+  check.names = FALSE,
+  fileEncoding = "Windows-1252"
+)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
